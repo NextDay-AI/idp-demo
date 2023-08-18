@@ -7,8 +7,8 @@ metadata:
 managedNodeGroups:
   - name: primary
     instanceType: t3.medium
-    minSize: 3
-    maxSize: 6
+    minSize: 1
+    maxSize: 2
     iam:
       withAddonPolicies:
         autoScaler: true
