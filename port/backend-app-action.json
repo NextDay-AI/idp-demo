@@ -5,7 +5,7 @@
     "properties": {
       "repo-org": {
         "type": "string",
-        "title": "Repo User",
+        "title": "Org User",
         "default": ""
       },
       "repo-user": {
