@@ -6,7 +6,7 @@ on:
         required: true
         description: "Repository organization"
         type: string
-        default: "devopsparadox"
+        default: "NextDay-AI"
       repo-user:
         required: true
         description: "Repository user"
@@ -21,7 +21,7 @@ on:
         required: true
         description: "Image repository"
         type: string
-        default: "docker.io/"
+        default: "docker.io/cyrillenextdayai"
       environment:
         required: true
         description: "Environment to deploy app to (production, staging, development)"
@@ -42,6 +42,11 @@ on:
         description: "Database size (small, medium, large)"
         type: string
         default: "medium"
+       port_payload:
+        required: true
+        description: Port's payload, including details for who triggered the action and
+          general context (blueprint, run id, etc...)
+        type: string
 jobs:
   deploy-app:
     runs-on: ubuntu-latest
