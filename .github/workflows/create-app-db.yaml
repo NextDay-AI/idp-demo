@@ -47,7 +47,7 @@ on:
         description: "Port's payload, including details for who triggered the action and general context (blueprint, run id, etc...)"
         type: string
 jobs:
-  deploy-app:
+  create-app-repo-andor-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -71,5 +71,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ORG_ADMIN_TOKEN }}
           branch: ${{ github.ref }}
